@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: "Orbitron", sans-serif
 }
 .hole_area{
     width: 100%;
@@ -37,7 +38,6 @@
     font-size: 18px;
     height: auto;
     text-transform: uppercase;
-    font-family:Arial, Helvetica, sans-serif;
 }
 .nav-bar ul li a{
     text-decoration: none;
@@ -53,9 +53,12 @@
     /* padding: 20px; */
     vertical-align:middle;
     margin: 7px 0px;
-    align-items: end;
-    height: 100px;
+    /* align-items: end; */
+    /* height: 100px; */
     width: 100%;
+    display: flex;
+    justify-content: end;
+    justify-items: center;
 }
 
 .btn a{
@@ -63,13 +66,13 @@
     color:white;
     font-size: 18px;
     text-transform: uppercase;
-    font-family:Arial, Helvetica, sans-serif;
+   /* font-family: "Orbitron", sans-serif; */
     background-color: green;
     padding:15px 60px;
 }
 .btn a:hover{
     color: green;
     text-decoration: none;
-    background-color: white;
+    background-color: transparent;
     border: 2px solid green;
 }

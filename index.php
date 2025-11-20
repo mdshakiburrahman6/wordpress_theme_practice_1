@@ -17,7 +17,7 @@
                 <div class="row">
                     <div class="col-md-3">
                         <div class="logo">
-                            <img src="<?php echo get_template_directory_uri(  ); ?>/assets/img/D W.png" alt="">
+                            <img src="<?php echo get_theme_mod( 'my_theme_07_logo' ); ?>" alt="">
                         </div>
                     </div>
                     <div class="col-md-6">
