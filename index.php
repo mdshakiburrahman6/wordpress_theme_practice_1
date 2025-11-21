@@ -12,7 +12,7 @@
 <div class="hole_area">
     <!-- Header -->
     <header>
-        <div class="header-area">
+        <div id="header_area" class="header-area">
             <div class="container">
                 <div class="row">
                     <div class="col-md-3">
@@ -20,21 +20,11 @@
                             <img src="<?php echo get_theme_mod( 'my_theme_07_logo' ); ?>" alt="">
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="nav-bar">
-                            <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Services</a></li>
-                                <li><a href="#">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="btn">
-                            <a href="#">Login</a>
-                        </div>
+                    <div class="col-md-9">
+                        <?php wp_nav_menu( array(
+                            'theme_location' => 'main_menu',
+                            'menu_id' => 'nav',
+                            )); ?>
                     </div>
                 </div>
             </div>
