@@ -3,6 +3,8 @@
 // Add theme support
 add_theme_support( 'title-tag' );
 
+// Add blog support
+add_theme_support('post-thumbnails', array('page', 'post'));
 
 // For link up Css & JQuerry file
 function learn_theme_css_enqueue(){
@@ -81,3 +83,28 @@ add_action('customize_register', 'my_theme_07_customizer_register');
 // Add Menu customize feature
  register_nav_menu('main_menu', __('primary_menu','my_theme_07'));
 
+
+//  Footer customizer
+function my_theme_07_footer_customize($wp_customize){
+    // Add section
+    $wp_customize->add_section('my_theme_07_footer', array(
+        'title' => 'Theme 07 Footer',
+        'description' => 'You can customize the footer from here.',
+    ));
+    $wp_customize->add_setting('theme_07_footer_customizer', array(
+        'default' => '&copy; 2025 Theme 07 || All Copyright Reserved.',
+    ));
+    $wp_customize->add_control('theme_07_footer_customizer', array(
+        'label' => 'Theme 07 Footer',
+        'description' => 'You can change the footer copyright text here.',
+        'section' => 'my_theme_07_footer',
+        'setting' => 'theme_07_footer_customizer',
+    ));
+}
+add_action('customize_register', 'my_theme_07_footer_customize');
+
+
+
+// ====================================
+//  
+// ====================================

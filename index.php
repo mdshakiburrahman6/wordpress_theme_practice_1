@@ -32,13 +32,56 @@
     </header>
     <!-- Mian -->
     <main>
+        <section class="content-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="content-area">
+                            <div class="blogs">
 
+                                <?php 
+                                    if(have_posts()) : 
+                                        while(have_posts( )) :
+                                            the_post( );    
+                                ?>
+
+                                    <div class="blog">
+                                        <?php the_post_thumbnail();?>
+                                        <h3 class="blog-title"> <?php the_title(); ?> </h3>
+                                        <p class="blog-excerpt"> <?php the_excerpt(); ?> </p>
+                                    </div>
+
+                                <?php 
+                                        endwhile;
+                                    else: 'No post found';
+                                    endif; 
+                                ?>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="sidebar-area">
+                            <h4>Sidebar Area</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- footer -->
-     <footer>
-
-     </footer>
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <section class="copyright-area">
+                        <p class="copyright"><?php echo get_theme_mod('theme_07_footer_customizer'); ?></p>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </footer>
 </div>
 
 <!-- Wp_footer -->
