@@ -4,4 +4,4 @@
 add_theme_support( 'title-tag' );
 
 // Add blog support
-add_theme_support('post-thumbnails', array('page', 'post'));
+add_theme_support('post-thumbnails', array('page', 'post', 'services'));

@@ -34,12 +34,12 @@
                     </div>
                     <div class="col-md-3">
                         <div class="sidebar-area">
-                            <h4>Sidebar Area</h4>
+                            <?php get_sidebar(); ?>
                         </div>
                     </div>
-                    <div class="pagination-area">
-                        <?php blog_post_pagination(); ?>
-                    </div>
+                </div>
+                <div class="pagination-area">
+                    <?php blog_post_pagination(); ?>
                 </div>
             </div>
         </section>

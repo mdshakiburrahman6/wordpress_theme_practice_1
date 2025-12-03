@@ -288,7 +288,8 @@ Blogs Style
 Sidebar Style
 ========================================*/
 .sidebar-area{
-  border: 1px solid gray;
+  border: 1px solid green;
+  border-radius: 5px;
   padding: 50px 20px;
 }
 
