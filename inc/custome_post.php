@@ -79,3 +79,13 @@ function portfolio_meta_box(){
 add_action('add_meta_boxes', 'portfolio_meta_box');
 
 // Meta box ui
+function portfolio_meta_box_callback($post){
+
+    $port_type = get_post_meta($post->ID, '_port_type', true);
+
+    ?>
+        <input type="text" name="port_type" value="<?php echo esc_attr( $port_type ); ?>">
+    <?php
+
+}
+
