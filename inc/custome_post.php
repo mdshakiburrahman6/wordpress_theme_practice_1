@@ -55,10 +55,27 @@ function custome_post_portfolio(){
         'hierarchical' => true,
         'show_ui' => true,
         'capability_type' => 'post',
-        'rewrite' => array('slug' => 'portfiolo'),
+        'taxonomies' => array('category', 'post_tag'),
+        'rewrite' => array('slug' => 'portfolio'),
         'supports' => array('title', 'thumbnail', 'editor', 'excerpt', 'page-attributes'),
     ));
 
 }
 add_action('init', 'custome_post_portfolio');
 
+
+
+// Custom Meta box for portfolio
+function portfolio_meta_box(){
+    add_meta_box( 
+        'port_type_id',
+        'Portfolio Type',
+        'portfolio_meta_box_callback',
+        'portfolio',
+        'normal',
+        'high',
+    );
+}
+add_action('add_meta_boxes', 'portfolio_meta_box');
+
+// Meta box ui
