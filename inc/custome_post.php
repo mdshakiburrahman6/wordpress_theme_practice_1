@@ -81,7 +81,7 @@ add_action('add_meta_boxes', 'portfolio_meta_box');
 // Meta box ui
 function portfolio_meta_box_callback($post){
 
-    $port_type = get_post_meta($post->ID, '_port_type', true);
+    $port_type = get_post_meta($post->ID, 'port_type', true);
 
     ?>
         <input type="text" name="port_type" value="<?php echo esc_attr( $port_type ); ?>">
@@ -89,3 +89,10 @@ function portfolio_meta_box_callback($post){
 
 }
 
+// Save Meta
+function portfolio_meta_save($post_id){
+       if(array_key_exists('port_type', $_POST)){
+        update_post_meta($post_id, 'port_type', sanitize_text_field( $_POST['port_type'] ));
+    }
+}
+add_action('save_post', 'portfolio_meta_save');
